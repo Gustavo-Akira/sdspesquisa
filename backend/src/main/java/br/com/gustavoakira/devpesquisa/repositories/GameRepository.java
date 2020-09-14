@@ -1,9 +1,10 @@
 package br.com.gustavoakira.devpesquisa.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import br.com.gustavoakira.devpesquisa.entities.Record;
-
-public interface GameRepository extends JpaRepository<Record, Long>{
+import br.com.gustavoakira.devpesquisa.entities.Game;
+@Repository
+public interface GameRepository extends JpaRepository<Game, Long>{
 
 }

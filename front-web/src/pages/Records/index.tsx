@@ -1,12 +1,12 @@
 import Axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Filter from '../../components/Filter';
 import { formatDate } from '../../helpers/formatDate';
 import Pagination from './Pagination';
 import './style.css';
 import { RecordResponse } from './types';
 
-const BASE_URL = "http://localhost:8085/";
+export const BASE_URL = "http://localhost:8085/";
 
 const Records = ()=>{
     const [recordsResponse, setRecordsResponse] = useState<RecordResponse>();
@@ -20,13 +20,7 @@ const Records = ()=>{
     },[activePage]);
     return(
     <div className="page-container">
-        <div className="filters-container records-actions">
-            <Link to="/charts">
-                <button className="action-filters">
-                    See Graphics
-                </button>
-            </Link>
-        </div>
+        <Filter link="/charts" linkText="See Graphics"/>
         <table className="records-table" cellPadding="0" cellSpacing="0">
             <thead>
                 <tr>

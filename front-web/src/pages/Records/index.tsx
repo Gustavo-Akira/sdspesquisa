@@ -6,7 +6,7 @@ import Pagination from './Pagination';
 import './style.css';
 import { RecordResponse } from './types';
 
-export const BASE_URL = "http://localhost:8085/";
+export const BASE_URL = "https://sds1-gustavoakirauekita.herokuapp.com/";
 
 const Records = ()=>{
     const [recordsResponse, setRecordsResponse] = useState<RecordResponse>();

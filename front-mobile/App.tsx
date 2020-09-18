@@ -8,9 +8,7 @@ import{
   Play_700Bold
 } from '@expo-google-fonts/play';
 
-
-import Header from './src/components/Header';
-import Home from './src/screens/Home';
+import Routes from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,8 +20,7 @@ export default function App() {
   }else{
     return (
       <View style={styles.container}>
-        <Header/>
-        <Home/>
+        <Routes/>
         <StatusBar style="light" />
       </View>
     );
